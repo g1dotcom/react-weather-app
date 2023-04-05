@@ -10,7 +10,7 @@ const Main = () => {
       <div className=" w-2/6 rounded-l-3xl bg-white">
         <Left />
       </div>
-      <div className="w-4/6 rounded-r-3xl  bg-slate-50">
+      <div className="w-4/6 rounded-r-3xl  bg-slate-100">
         <Right />
       </div>
     </div>
