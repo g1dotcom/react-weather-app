@@ -1,11 +1,10 @@
 import "./App.css";
-import Left from "./Components/Left";
-import Right from "./Components/Right";
+
 import Main from "./Pages/Main";
 
 function App() {
   return (
-    <div className="">
+    <div className="bg-slate-300 h-screen  p-20">
       <Main />
     </div>
   );

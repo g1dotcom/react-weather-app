@@ -6,11 +6,11 @@ import Right from "../Components/Right";
 
 const Main = () => {
   return (
-    <div className="flex flex-row h-screen">
-      <div className=" flex-1 bg-red-400">
+    <div className="flex justify-center rounded-3xl  h-full">
+      <div className=" w-2/6 rounded-l-3xl bg-white">
         <Left />
       </div>
-      <div className="flex-2 bg-slate-500">
+      <div className="w-4/6 rounded-r-3xl  bg-slate-50">
         <Right />
       </div>
     </div>
