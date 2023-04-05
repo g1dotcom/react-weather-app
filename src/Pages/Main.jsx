@@ -3,11 +3,11 @@ import React from "react";
 //components
 import Left from "../Components/Left";
 import Right from "../Components/Right";
-import getWeatherData from "../services/weatherService";
+import getFormattedWeatherData from "../services/weatherService";
 
 const Main = () => {
   const fetchWeather = async () => {
-    const data = await getWeatherData("weather", { q: "London" });
+    const data = await getFormattedWeatherData({ q: "London" });
     console.log(data);
   };
 
