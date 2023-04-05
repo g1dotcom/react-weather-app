@@ -1,16 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 //components
 import CityButtons from "./CityButtons";
 import GetDay from "./getDay";
 import InfoWeather from "./infoWeather";
-import SelectedTime from "./SelectedTime";
+import GetHours from "./GetHours";
+//react spring
+import { useTransition, animated } from "react-spring";
 
 const Right = () => {
+  const [selected, setSelected] = useState("true");
+  const [change, setChange] = useState("false");
+
+  const handleclick = () => {
+    setSelected(!selected);
+    setChange(change);
+  };
+
+  //transitions
+  useEffect(() => {
+    const transition = setTimeout(() => setSelected(true), 1000);
+    return () => clearTimeout(transition);
+  }, []);
+  //transitions
+  const transitions = useTransition(selected, {
+    from: { opacity: 0 },
+    enter: { opacity: 1 },
+    config: { duration: 1000 },
+  });
+
   return (
     <div>
       <CityButtons />
-      <SelectedTime />
-      <GetDay />
+      <div className="flex justify-center items-center mt-10">
+        <button
+          className={` cursor-pointer hover:opacity-50 ${
+            selected
+              ? "text-gray-500 underline underline-offset-8 shadow-xl font-medium shadow-slate-300"
+              : "text-gray-900"
+          }`}
+          onClick={handleclick}
+        >
+          DAILY FORECAST{" "}
+        </button>
+        <span className="mx-5">||</span>
+        <button
+          className={`cursor-pointer hover:opacity-50 ${
+            selected
+              ? "text-gray-500 "
+              : "text-gray-500 underline underline-offset-8 shadow-xl font-medium shadow-slate-300"
+          }`}
+          onClick={handleclick}
+        >
+          HOURLY FORECAST{" "}
+        </button>
+      </div>
+      {transitions((style, item) =>
+        item ? (
+          <animated.div style={style}>
+            <GetDay />
+          </animated.div>
+        ) : (
+          <animated.div style={style}>
+            <GetHours />
+          </animated.div>
+        )
+      )}
+
       <InfoWeather />
     </div>
   );
