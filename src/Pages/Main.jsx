@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 //components
 import Left from "../Components/Left";
@@ -6,20 +6,26 @@ import Right from "../Components/Right";
 import getFormattedWeatherData from "../services/weatherService";
 
 const Main = () => {
-  const fetchWeather = async () => {
-    const data = await getFormattedWeatherData({ q: "London" });
-    console.log(data);
-  };
+  const [query, setQuery] = useState({ q: "berlin" });
+  const [units, setUnits] = useState("metric");
+  const [weather, setWeather] = useState(null);
 
-  fetchWeather();
+  useEffect(() => {
+    const fetchWeather = async () => {
+      await getFormattedWeatherData({ ...query, units }).then((data) => {
+        setWeather(data);
+      });
+    };
+    fetchWeather();
+  }, [query, units]);
 
   return (
     <div className="flex justify-center rounded-3xl  h-full shadow-2xl shadow-slate-600">
       <div className=" w-2/6 rounded-l-3xl bg-white">
-        <Left />
+        <Left weather={weather} />
       </div>
       <div className="w-4/6 rounded-r-3xl  bg-slate-100">
-        <Right />
+        <Right weather={weather} />
       </div>
     </div>
   );
