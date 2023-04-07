@@ -35,8 +35,8 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         <button
           className={` cursor-pointer hover:opacity-50 ${
             selected
-              ? "text-gray-500 underline underline-offset-8 shadow-xl font-medium shadow-slate-300"
-              : "text-gray-400"
+              ? "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300"
+              : "text-gray-400 font-main"
           }`}
           onClick={handleclick}
         >
@@ -46,8 +46,8 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         <button
           className={`cursor-pointer hover:opacity-50 ${
             selected
-              ? "text-gray-500 "
-              : "text-gray-500 underline underline-offset-8 shadow-xl font-medium shadow-slate-300"
+              ? "text-gray-500 font-main "
+              : "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300"
           }`}
           onClick={handleclick}
         >
