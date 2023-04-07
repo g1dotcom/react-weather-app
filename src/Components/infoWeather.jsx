@@ -5,13 +5,17 @@ import { BsCloudSun } from "react-icons/bs";
 import { FiSunset } from "react-icons/fi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import { formatToLocalTime } from "../services/weatherService";
 
-const infoWeather = () => {
+const infoWeather = ({ weather: { sunrise, timezone } }) => {
   return (
     <div className="bg-gray-50 flex justify-around py-2 mx-16">
       <div className="flex justify-center items-center">
         <BsCloudSun className="mx-2" />
-        Rise: <span className="font-bold mx-2">04:50 AM</span>
+        Rise:{" "}
+        <span className="font-bold mx-2">
+          {formatToLocalTime(sunrise, timezone, "hh:mm a")}
+        </span>
       </div>
       <div className="flex justify-center items-center ">
         <FiSunset className="mx-2" />
