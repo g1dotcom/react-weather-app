@@ -4,11 +4,11 @@ import React from "react";
 import CityInput from "./CityInput";
 import CityInfo from "./CityInfo";
 
-const Left = ({ weather }) => {
+const Left = ({ weather, setQuery }) => {
   return (
     <div className="h-full w-full rounded-3xl">
       <div className="h-1/6 flex items-center justify-center rounded-3xl  p-5">
-        <CityInput />
+        <CityInput setQuery={setQuery} />
       </div>
       <div className="h-4/6 ">
         <CityInfo weather={weather} />
