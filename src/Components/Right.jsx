@@ -36,7 +36,7 @@ const Right = ({ weather }) => {
           className={` cursor-pointer hover:opacity-50 ${
             selected
               ? "text-gray-500 underline underline-offset-8 shadow-xl font-medium shadow-slate-300"
-              : "text-gray-900"
+              : "text-gray-400"
           }`}
           onClick={handleclick}
         >

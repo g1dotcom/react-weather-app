@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-custom-red {
+  background-color: #3ebbdd;
+}
+.bg-main-gray {
+  background-color: #d6d7db;
+}
+.bg-main-left {
+  background-color: #ffffff;
+}
+.bg-main-right {
+  background-color: #f7f6f9;
+}

@@ -12,7 +12,7 @@ const infoWeather = ({
   weather: { sunrise, sunset, temp_min, temp_max, timezone },
 }) => {
   return (
-    <div className="bg-gray-50 flex justify-around py-2 mx-16">
+    <div className="bg-main-left flex justify-around py-2 mx-16">
       <div className="flex justify-center items-center">
         <WiSunrise size={25} className="mx-2" />
         Rise:{" "}
