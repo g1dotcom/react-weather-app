@@ -18,7 +18,7 @@ const CityInfo = ({
           <h1 className="text-6xl font-bold font-mono">
             {`${temp.toFixed()}`}°c
           </h1>
-          <h1 className="text-xl font-mono font-medium my-5">
+          <h1 className="text-lg  font-medium font-main my-5">
             {formatToLocalTime(dt, timezone)}{" "}
           </h1>
           <hr />

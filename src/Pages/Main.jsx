@@ -20,7 +20,7 @@ const Main = () => {
   }, [query, units]);
 
   return (
-    <div className="flex justify-center rounded-3xl  h-full shadow-2xl shadow-slate-600">
+    <div className="flex justify-center rounded-3xl   h-full shadow-2xl shadow-slate-600">
       <div className=" w-1/6 rounded-l-3xl bg-main-left">
         {weather && (
           <Left

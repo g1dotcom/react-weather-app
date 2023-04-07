@@ -119,23 +119,24 @@ const CityPercentage = ({
         </div>
       </div>
       <div className="bg-white w-1/6 h-full rounded-3xl   flex flex-col justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
-        <div className=" form-control bg-gray-100">
+        <div className=" form-control ">
           <button
             name="metric"
-            className="btn btn-active px-10 bg-gray-400"
+            className="btn btn-active px-10 font-main bg-gray-400 rounded-full text-black hover:text-white"
             onClick={handleUnitsChange}
           >
-            C
+            Celsius
           </button>
         </div>
-        <h1 className="text-3xl font-medium bg-gray-100">Choose Value </h1>
+        <h1 className="text-xl font-main font-medium ">Choose Value </h1>
+
         <div className="form-control bg-gray-100">
           <button
             name="imperial"
-            className="btn btn-active px-10 bg-gray-600"
+            className="btn btn-active px-10 font-main bg-gray-600 rounded-full hover:bg-gray-400 hover:text-black"
             onClick={handleUnitsChange}
           >
-            F
+            Fahrenheit
           </button>
         </div>
       </div>

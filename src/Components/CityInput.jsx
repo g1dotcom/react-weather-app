@@ -28,26 +28,33 @@ const CityInput = ({ setQuery }) => {
 
   return (
     <div className="h-full w-full mt-10 flex justify-center items-center">
-      <div className="h-1/6  w-full flex flex-row items-center justify-center  p-5">
-        <input
-          value={city}
-          onChange={(e) => setCity(e.currentTarget.value)}
-          type="text"
-          placeholder="Search for places"
-          className=" focus:outline-none 
+      <div className="">
+        {" "}
+        <div className="h-1/6  w-full flex flex-row items-center justify-center  p-5">
+          <input
+            value={city}
+            onChange={(e) => setCity(e.currentTarget.value)}
+            type="text"
+            placeholder="Search for places"
+            className=" focus:outline-none 
           input min-w-full   bg-gray-100 "
-        />
-        <div className="">
-          <AiOutlineSearch
-            className="hover:scale-105"
-            size={25}
-            onClick={handleSearchClick}
           />
+          <div className="">
+            <AiOutlineSearch
+              className="hover:scale-110 hover:bg-gray-300 rounded-full   cursor-pointer"
+              size={25}
+              onClick={handleSearchClick}
+            />
+          </div>
         </div>
+        <div className="flex justify-around items-center mb-1">
+          <h1 className="font-main">Get the weather for where I live</h1>
+          <button className="bg-gray-200  rounded-full p-2 mr-2 hover:bg-gray-300 hover:scale-105 cursor-pointer">
+            <GoLocation onClick={handleLocationClick} size={25} />
+          </button>
+        </div>
+        <hr />
       </div>
-      <button className="bg-gray-200 rounded-full p-2 mr-2 hover:bg-gray-300 hover:scale-105">
-        <GoLocation onClick={handleLocationClick} size={25} />
-      </button>
     </div>
   );
 };
