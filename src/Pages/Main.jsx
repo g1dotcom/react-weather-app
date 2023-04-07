@@ -22,7 +22,7 @@ const Main = () => {
   return (
     <div className="flex justify-center rounded-3xl  h-full shadow-2xl shadow-slate-600">
       <div className=" w-1/6 rounded-l-3xl bg-main-left">
-        {weather && <Left weather={weather} />}
+        {weather && <Left setQuery={setQuery} weather={weather} />}
       </div>
       <div className="w-5/6 rounded-r-3xl  bg-main-right">
         {weather && <Right weather={weather} />}
