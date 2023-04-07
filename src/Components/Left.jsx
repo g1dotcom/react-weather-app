@@ -4,14 +4,14 @@ import React from "react";
 import CityInput from "./CityInput";
 import CityInfo from "./CityInfo";
 
-const Left = () => {
+const Left = ({ weather }) => {
   return (
     <div className="h-full w-full rounded-3xl">
       <div className="h-1/6 flex items-center justify-center rounded-3xl  p-5">
         <CityInput />
       </div>
-      <div className="h-4/6 bg-red-200">
-        <CityInfo />
+      <div className="h-4/6 ">
+        <CityInfo weather={weather} />
       </div>
       <div className="h-1/6 rounded-3xl  "></div>
     </div>

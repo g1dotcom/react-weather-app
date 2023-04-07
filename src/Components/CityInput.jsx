@@ -6,25 +6,17 @@ import { GoLocation } from "react-icons/go";
 
 const CityInput = () => {
   return (
-    <div className="h-full w-full">
-      <div className="h-1/6 flex items-center justify-center  p-5">
-        <GoLocation size={20} />
+    <div className="h-full w-full mt-10">
+      <div className="h-1/6  w-full flex flex-row items-center justify-center  p-5">
         <input
           type="text"
           placeholder="Search for places"
-          className=" focus:outline-none flex justify-end items-end input w-full max-w-xl bg-gray-50 "
+          className=" focus:outline-none 
+          input w-full   bg-gray-100 "
         />
-        <BiSearch size={35} className="mr-4" />
-
-        <button className="text-lg font-semibold mx-2 rounded-3xl btn btn-outline  px-2 ">
-          °C
-        </button>
-        <h1 className="mx-1">|</h1>
-        <h1 className="mx-1">|</h1>
-
-        <button className="text-lg font-semibold mx-2 rounded-3xl btn btn-outline px-2">
-          °F
-        </button>
+        <div className="">
+          <GoLocation size={25} />
+        </div>
       </div>
     </div>
   );

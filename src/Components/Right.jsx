@@ -7,7 +7,7 @@ import GetHours from "./GetHours";
 //react spring
 import { useTransition, animated } from "react-spring";
 
-const Right = () => {
+const Right = ({ weather }) => {
   const [selected, setSelected] = useState("true");
   const [change, setChange] = useState("false");
 
@@ -15,7 +15,6 @@ const Right = () => {
     setSelected(!selected);
     setChange(change);
   };
-
   //transitions
   useEffect(() => {
     const transition = setTimeout(() => setSelected(true), 1000);
@@ -57,11 +56,11 @@ const Right = () => {
       {transitions((style, item) =>
         item ? (
           <animated.div style={style}>
-            <GetDay />
+            <GetDay items={weather.daily} />
           </animated.div>
         ) : (
           <animated.div style={style}>
-            <GetHours />
+            <GetHours items={weather.hourly} />
           </animated.div>
         )
       )}

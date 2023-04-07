@@ -6,7 +6,7 @@ import Right from "../Components/Right";
 import getFormattedWeatherData from "../services/weatherService";
 
 const Main = () => {
-  const [query, setQuery] = useState({ q: "berlin" });
+  const [query, setQuery] = useState({ q: "adana" });
   const [units, setUnits] = useState("metric");
   const [weather, setWeather] = useState(null);
 
@@ -21,11 +21,11 @@ const Main = () => {
 
   return (
     <div className="flex justify-center rounded-3xl  h-full shadow-2xl shadow-slate-600">
-      <div className=" w-2/6 rounded-l-3xl bg-white">
-        <Left weather={weather} />
+      <div className=" w-1/6 rounded-l-3xl bg-white">
+        {weather && <Left weather={weather} />}
       </div>
-      <div className="w-4/6 rounded-r-3xl  bg-slate-100">
-        <Right weather={weather} />
+      <div className="w-5/6 rounded-r-3xl  bg-slate-100">
+        {weather && <Right weather={weather} />}
       </div>
     </div>
   );
