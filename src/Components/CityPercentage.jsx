@@ -1,7 +1,7 @@
 import React from "react";
 
 const CityPercentage = () => {
-  return <div>aaa</div>;
+  return <div></div>;
 };
 
 export default CityPercentage;
