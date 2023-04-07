@@ -1,17 +1,20 @@
 import React from "react";
 
 //icons
-import { BsCloudSun } from "react-icons/bs";
+import { WiSunrise } from "react-icons/wi";
 import { FiSunset } from "react-icons/fi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
+import { HiOutlineSun } from "react-icons/hi";
 import { formatToLocalTime } from "../services/weatherService";
 
-const infoWeather = ({ weather: { sunrise, timezone } }) => {
+const infoWeather = ({
+  weather: { sunrise, sunset, temp_min, temp_max, timezone },
+}) => {
   return (
     <div className="bg-gray-50 flex justify-around py-2 mx-16">
       <div className="flex justify-center items-center">
-        <BsCloudSun className="mx-2" />
+        <WiSunrise size={25} className="mx-2" />
         Rise:{" "}
         <span className="font-bold mx-2">
           {formatToLocalTime(sunrise, timezone, "hh:mm a")}
@@ -19,15 +22,21 @@ const infoWeather = ({ weather: { sunrise, timezone } }) => {
       </div>
       <div className="flex justify-center items-center ">
         <FiSunset className="mx-2" />
-        Set: <span className="font-bold mx-2">04:50 PM</span>
+        Set:{" "}
+        <span className="font-bold mx-2">
+          {" "}
+          {formatToLocalTime(sunset, timezone, "hh:mm a")}
+        </span>
       </div>
       <div className="flex justify-center items-center ">
-        <AiOutlineArrowUp className="mx-2 " />
-        High: <span className="font-bold mx-2">21°C</span>
+        <HiOutlineSun />
+        <AiOutlineArrowUp />
+        High: <span className="font-bold mx-2">{`${temp_min.toFixed()}`}°</span>
       </div>
       <div className="flex justify-center items-center">
-        <AiOutlineArrowDown className="mx-2" />
-        Low: <span className="font-bold mx-2">10°C</span>
+        <HiOutlineSun />
+        <AiOutlineArrowDown />
+        Low: <span className="font-bold mx-2">{`${temp_max.toFixed()}`}°</span>
       </div>
     </div>
   );
