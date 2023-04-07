@@ -6,6 +6,7 @@ import InfoWeather from "./infoWeather";
 import GetHours from "./GetHours";
 //react spring
 import { useTransition, animated } from "react-spring";
+import CityPercentage from "./CityPercentage";
 
 const Right = ({ weather }) => {
   const [selected, setSelected] = useState("true");
@@ -66,6 +67,7 @@ const Right = ({ weather }) => {
       )}
 
       <InfoWeather />
+      <CityPercentage />
     </div>
   );
 };

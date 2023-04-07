@@ -31,13 +31,13 @@ const CityInfo = ({
             <MdGrain size={30} />
             <h1 className="mx-2"> {`${humidity}`}%</h1>
           </p>
-          <div className=" flex justify-center items-center w-full">
+          <div className=" flex justify-center items-center w-full truncate">
             <img
               className="relative bg-cover w-full mt-10 h-32 rounded-3xl opacity-50"
               src="https://i.pinimg.com/600x315/66/81/ee/6681eea42fc9c35376a8171f0f82e97f.jpg"
               alt=""
             />
-            <h1 className="absolute text-gray-500 text-6xl font-semibold">
+            <h1 className="absolute text-gray-500 text-4xl font-semibold truncate">
               {name}
             </h1>
           </div>
