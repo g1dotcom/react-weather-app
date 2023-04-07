@@ -69,7 +69,7 @@ const Right = ({ weather }) => {
       <InfoWeather weather={weather} />
       <div className="p-10">
         {" "}
-        <CityPercentage />
+        <CityPercentage weather={weather} />
       </div>
     </div>
   );

@@ -1,13 +1,14 @@
 import React from "react";
+import { BsThermometerSun } from "react-icons/bs";
 
-const CityPercentage = () => {
+const CityPercentage = ({ weather: { speed, humidity, feels_like } }) => {
   return (
     <div className=" w-full h-56 flex justify-around items-center">
-      <div className=" bg-white flex items-center w-1/6 h-full rounded-3xl  shadow-lg shadow-gray-600">
+      <div className=" bg-white flex items-center w-1/6 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
         <div className="w-full h-full flex flex-col items-center justify-around ">
           <h1 className="mx-5 text-gray-400 font-medium mb-8">Wind</h1>
-          <p className="text-4xl font-medium">
-            2.10 <span className="text-xl">km/h</span>
+          <p className="text-6xl font-medium">
+            {`${speed.toFixed()}`} <span className="text-xl">km/h</span>
           </p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -38,14 +39,17 @@ const CityPercentage = () => {
           <h1 className="font-medium">Normal</h1>
         </div>
       </div>
-      <div className=" bg-white flex items-center w-1/6 h-full rounded-3xl  shadow-lg shadow-gray-600">
+      <div className=" bg-white flex items-center w-1/6 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
         <div className="w-1/2 h-full flex flex-col items-center justify-around ">
           <h1 className="mx-5 text-gray-400 font-medium">Humidity</h1>
           <div
             className="radial-progress bg-custom-red"
             style={{ "--value": "70", "--size": "3rem", "--thickness": "2px" }}
           >
-            <span className="font-medium text-white"> 70%</span>
+            <span className="font-medium text-white">
+              {" "}
+              {`${humidity.toFixed()}`}{" "}
+            </span>
           </div>
           <h1 className="font-medium">Normal</h1>
         </div>
@@ -66,8 +70,71 @@ const CityPercentage = () => {
           </svg>
         </div>
       </div>
-      <div className="bg-white w-1/6 h-full rounded-3xl  shadow-lg shadow-gray-600"></div>
-      <div className="bg-white w-1/6 h-full rounded-3xl  shadow-lg shadow-gray-600"></div>
+      <div className=" bg-white flex items-center w-1/6 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500">
+        <div className="w-1/2  h-full flex flex-col items-center justify-around ">
+          <h1 className=" text-gray-400 font-medium">Real Fell </h1>
+          <div className="text-3xl font-medium flex justify-center items-center">
+            <BsThermometerSun className="mx-1" />
+            {`${feels_like.toFixed()}`}°
+          </div>
+
+          <h1 className="font-medium">İzmir</h1>
+        </div>
+        <div className="w-1/2  h-full flex justify-center items-center">
+          <div className="-ml-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="86"
+              enable-background="new 0 0 64 64"
+              viewBox="0 0 50 64"
+              id="thermometer"
+            >
+              <path d="M38.374 10.241c.204.004.413.009.626.009.552 0 1-.433 1-.967s-.448-.967-1-.967c-.198 0-.393-.004-.583-.008-1.155-.024-2.339-.048-3.253.817C34.359 9.888 34 11.128 34 13.15c0 2.021.359 3.262 1.164 4.023.765.724 1.72.825 2.685.825.189 0 .38-.003.569-.007.19-.005.385-.009.583-.009.552 0 1-.433 1-.967s-.448-.967-1-.967c-.213 0-.422.005-.626.009-.929.017-1.513.016-1.812-.267C36.306 15.55 36 14.895 36 13.15c0-1.745.306-2.4.563-2.643C36.861 10.226 37.445 10.221 38.374 10.241zM44 3.967c-1.654 0-3 1.301-3 2.899 0 1.6 1.346 2.9 3 2.9s3-1.301 3-2.9C47 5.268 45.654 3.967 44 3.967zM44 7.833c-.551 0-1-.433-1-.967C43 6.333 43.449 5.9 44 5.9s1 .433 1 .966C45 7.4 44.551 7.833 44 7.833zM31.444 44.992V8.708c0-1.507-.552-2.929-1.559-4.006C28.849 3.604 27.47 3 26 3c-3.002 0-5.444 2.562-5.444 5.708v36.284C18.32 46.672 17 49.287 17 52.087 17 57.001 21.038 61 26 61s9-3.999 9-8.913C35 49.287 33.68 46.672 31.444 44.992zM26 59.066c-3.86 0-7-3.131-7-6.979 0-2.34 1.167-4.511 3.122-5.808.271-.181.434-.479.434-.797V8.708c0-2.081 1.545-3.774 3.444-3.774.9 0 1.755.38 2.404 1.067.671.719 1.04 1.68 1.04 2.707v2.025H28c-.552 0-1 .433-1 .967s.448.967 1 .967h1.444v3.866H28c-.552 0-1 .433-1 .967s.448.967 1 .967h1.444v3.866H28c-.552 0-1 .433-1 .967s.448.967 1 .967h1.444v3.867H28c-.552 0-1 .432-1 .966 0 .535.448.967 1 .967h1.444v15.416c0 .318.163.616.434.797C31.833 47.576 33 49.747 33 52.087 33 55.936 29.86 59.066 26 59.066z"></path>
+              <path
+                d="M28.67,48.219v-8.485c0-0.839-0.231-1.645-0.652-2.269c-0.495-0.733-1.23-1.153-2.018-1.153
+			c-1.497,0-2.67,1.503-2.67,3.422v8.485C21.886,49.096,21,50.637,21,52.3c0,2.501,2.003,4.604,4.569,4.808
+			c0.142,0.021,0.292,0.026,0.431,0.026s0.289-0.005,0.431-0.026C28.997,56.904,31,54.801,31,52.3
+			C31,50.637,30.114,49.096,28.67,48.219z M26.238,55.184c-0.016,0.001-0.093,0.012-0.109,0.014C26.088,55.203,26.042,55.2,26,55.2
+			c-0.042,0.001-0.085,0.002-0.119-0.001c-0.039-0.008-0.079-0.013-0.119-0.016C24.213,55.074,23,53.809,23,52.3
+			c0-1.047,0.585-2.013,1.527-2.521c0.081-0.043,0.154-0.097,0.22-0.16c0.022-0.021,0.054-0.054,0.074-0.077
+			c0.058-0.067,0.113-0.131,0.177-0.187c0.211-0.183,0.332-0.444,0.332-0.719v-8.903c0-0.967,0.476-1.489,0.67-1.489
+			c0.078,0,0.213,0.086,0.342,0.277c0.208,0.309,0.328,0.75,0.328,1.212v8.903c0,0.274,0.121,0.536,0.332,0.719
+			c0.064,0.056,0.12,0.119,0.177,0.187c0.02,0.023,0.051,0.056,0.074,0.077c0.065,0.063,0.139,0.117,0.22,0.16
+			C28.415,50.287,29,51.253,29,52.3C29,53.809,27.787,55.074,26.238,55.184z"
+              ></path>
+            </svg>
+          </div>
+          ;
+        </div>
+      </div>
+      <div className="bg-white w-1/6 h-full rounded-3xl   flex flex-col justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
+        <div className=" form-control bg-gray-100">
+          <label className="label cursor-pointer">
+            <h1 className=" text-gray-400 font-medium mr-5">Real Fell </h1>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-red-500"
+              checked
+            />
+          </label>
+          <hr />
+        </div>
+
+        <div className="form-control bg-gray-100">
+          <label className="label cursor-pointer">
+            <h1 className=" text-gray-400 font-medium mr-5">Real Fell </h1>
+            <input
+              type="radio"
+              name="radio-10"
+              className="radio checked:bg-blue-500"
+              checked
+            />
+          </label>
+          <hr />
+        </div>
+      </div>
     </div>
   );
 };
