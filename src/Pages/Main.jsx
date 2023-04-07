@@ -32,7 +32,14 @@ const Main = () => {
         )}
       </div>
       <div className="w-5/6 rounded-r-3xl  bg-main-right">
-        {weather && <Right setQuery={setQuery} weather={weather} />}
+        {weather && (
+          <Right
+            units={units}
+            setUnits={setUnits}
+            setQuery={setQuery}
+            weather={weather}
+          />
+        )}
       </div>
     </div>
   );

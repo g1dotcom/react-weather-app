@@ -1,7 +1,17 @@
 import React from "react";
 import { BsThermometerSun } from "react-icons/bs";
 
-const CityPercentage = ({ weather: { speed, humidity, feels_like } }) => {
+const CityPercentage = ({
+  weather: { speed, humidity, feels_like, name },
+  units,
+  setUnits,
+}) => {
+  //handle units
+  const handleUnitsChange = (e) => {
+    const selectedUnit = e.currentTarget.name;
+    if (units !== selectedUnit) setUnits(selectedUnit);
+  };
+
   return (
     <div className=" w-full h-56 flex justify-around items-center">
       <div className=" bg-white flex items-center w-1/6 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
@@ -110,29 +120,23 @@ const CityPercentage = ({ weather: { speed, humidity, feels_like } }) => {
       </div>
       <div className="bg-white w-1/6 h-full rounded-3xl   flex flex-col justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
         <div className=" form-control bg-gray-100">
-          <label className="label cursor-pointer">
-            <h1 className=" text-gray-400 font-medium mr-5">Real Fell </h1>
-            <input
-              type="radio"
-              name="radio-10"
-              className="radio checked:bg-red-500"
-              checked
-            />
-          </label>
-          <hr />
+          <button
+            name="metric"
+            className="btn btn-active px-10 bg-gray-400"
+            onClick={handleUnitsChange}
+          >
+            C
+          </button>
         </div>
-
+        <h1 className="text-3xl font-medium bg-gray-100">Choose Value </h1>
         <div className="form-control bg-gray-100">
-          <label className="label cursor-pointer">
-            <h1 className=" text-gray-400 font-medium mr-5">Real Fell </h1>
-            <input
-              type="radio"
-              name="radio-10"
-              className="radio checked:bg-blue-500"
-              checked
-            />
-          </label>
-          <hr />
+          <button
+            name="imperial"
+            className="btn btn-active px-10 bg-gray-600"
+            onClick={handleUnitsChange}
+          >
+            F
+          </button>
         </div>
       </div>
     </div>

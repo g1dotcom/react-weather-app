@@ -8,7 +8,7 @@ import GetHours from "./GetHours";
 import { useTransition, animated } from "react-spring";
 import CityPercentage from "./CityPercentage";
 
-const Right = ({ weather, setQuery }) => {
+const Right = ({ weather, setQuery, units, setUnits }) => {
   const [selected, setSelected] = useState("true");
   const [change, setChange] = useState("false");
 
@@ -68,7 +68,7 @@ const Right = ({ weather, setQuery }) => {
 
       <InfoWeather weather={weather} />
       <div className="p-10">
-        <CityPercentage weather={weather} />
+        <CityPercentage weather={weather} units={units} setUnits={setUnits} />
       </div>
     </div>
   );

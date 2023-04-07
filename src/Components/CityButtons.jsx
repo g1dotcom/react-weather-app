@@ -28,7 +28,7 @@ const CityButtons = ({ setQuery }) => {
     },
     {
       id: 7,
-      title: "Tokya",
+      title: "Tokyo",
     },
   ];
 
@@ -38,7 +38,7 @@ const CityButtons = ({ setQuery }) => {
         {cities.map((city) => (
           <button
             onClick={() => setQuery({ q: city.title })}
-            className="bg-slate-150 hover:bg-slate-100 text-slate-900 font-semibold hover:text-slate-900 py-2 px-4 border border-slate-400 hover:border-transparent rounded mx-2"
+            className="bg-main-left hover:bg-slate-100 text-slate-900 font-semibold hover:text-slate-900 py-2 px-4 border border-slate-200 hover:border-transparent rounded mx-2"
           >
             {city.title}
           </button>
