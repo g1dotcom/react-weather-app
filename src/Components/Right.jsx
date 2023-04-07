@@ -8,7 +8,7 @@ import GetHours from "./GetHours";
 import { useTransition, animated } from "react-spring";
 import CityPercentage from "./CityPercentage";
 
-const Right = ({ weather }) => {
+const Right = ({ weather, setQuery }) => {
   const [selected, setSelected] = useState("true");
   const [change, setChange] = useState("false");
 
@@ -30,7 +30,7 @@ const Right = ({ weather }) => {
 
   return (
     <div>
-      <CityButtons />
+      <CityButtons setQuery={setQuery} />
       <div className="flex justify-center items-center mt-10">
         <button
           className={` cursor-pointer hover:opacity-50 ${

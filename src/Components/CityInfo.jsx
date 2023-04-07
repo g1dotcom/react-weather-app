@@ -4,7 +4,7 @@ import { AiOutlineCloud } from "react-icons/ai";
 import { MdGrain } from "react-icons/md";
 
 const CityInfo = ({
-  weather: { dt, timezone, name, details, humidity, temp },
+  weather: { dt, timezone, name, details, humidity, temp, country },
 }) => {
   return (
     <div className="w-full h-full">
@@ -38,7 +38,7 @@ const CityInfo = ({
               alt=""
             />
             <h1 className="absolute text-gray-500 text-4xl font-semibold truncate">
-              {name}
+              {name},{country}
             </h1>
           </div>
         </div>

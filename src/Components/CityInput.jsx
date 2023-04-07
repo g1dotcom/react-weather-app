@@ -4,7 +4,7 @@ import React from "react";
 import { BiSearch } from "react-icons/bi";
 import { GoLocation } from "react-icons/go";
 
-const CityInput = () => {
+const CityInput = ({ setQuery, setUnits, units }) => {
   return (
     <div className="h-full w-full mt-10">
       <div className="h-1/6  w-full flex flex-row items-center justify-center  p-5">
