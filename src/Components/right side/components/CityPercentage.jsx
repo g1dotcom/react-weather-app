@@ -13,8 +13,8 @@ const CityPercentage = ({
   };
 
   return (
-    <div className=" w-full h-56  flex items-center flex-wrap">
-      <div className=" bg-white flex justify-around  items-center mx-10 sm:w-1/5 w-12 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
+    <div className=" w-full h-56  flex items-center justify-between flex-wrap">
+      <div className=" bg-white flex justify-around  items-center mx-4 sm:w-1/6 w-12 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
         <div className=" h-full flex flex-col items-center justify-around ">
           <h1 className=" text-gray-400 font-medium mb-8">Wind</h1>
           <p className="text-6xl font-medium">
@@ -49,7 +49,7 @@ const CityPercentage = ({
           <h1 className="font-medium">Normal</h1>
         </div>
       </div>
-      <div className=" bg-white flex justify-around sm items-center mx-10 w-1/4 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
+      <div className=" bg-white flex justify-around sm items-center mx-4 w-1/6 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
         <div className="w-1/2 h-full flex flex-col items-center justify-around ">
           <h1 className="mx-5 text-gray-400 font-medium">Humidity</h1>
           <div
@@ -80,7 +80,7 @@ const CityPercentage = ({
           </svg>
         </div>
       </div>
-      <div className=" bg-white flex items-center w-1/4 sm h-full mx-10 rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500">
+      <div className=" bg-white flex items-center w-1/6 sm h-full mx-4 rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500">
         <div className="w-1/2  h-full flex flex-col items-center justify-around ">
           <h1 className=" text-gray-400 font-medium">Real Fell </h1>
           <div className="text-3xl font-medium flex justify-center items-center">
@@ -118,7 +118,7 @@ const CityPercentage = ({
           ;
         </div>
       </div>
-      <div className="bg-white w-1/4 h-full rounded-3xl sm  flex flex-col mx-10 justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
+      <div className="bg-white w-1/6 h-full rounded-3xl sm  flex flex-col mx-4 justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
         <div className=" form-control ">
           <button
             name="metric"
