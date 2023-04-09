@@ -12,8 +12,8 @@ const infoWeather = ({
   weather: { sunrise, sunset, temp_min, temp_max, timezone },
 }) => {
   return (
-    <div className="bg-main-left  flex justify-around py-2 mx-16 shadow-lg shadow-gray-500 hover:bg-gray-200  transition-all duration-500 flex-wrap">
-      <div className="flex justify-center items-center flex-1 grow-0 mb-4 sm:grow-1">
+    <div className="bg-main-left  flex justify-between py-2 mx-16 sm:px-10 shadow-lg shadow-gray-500 hover:bg-gray-200  transition-all duration-500 flex-wrap w-full ">
+      <div className="flex justify-center items-center ">
         <WiSunrise size={25} className="mx-2" />
         Rise:{" "}
         <span className="font-bold mx-2">

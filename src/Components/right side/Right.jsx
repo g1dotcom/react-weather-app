@@ -29,7 +29,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
   });
 
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col justify-center items-center  width-1024">
       <CityButtons setQuery={setQuery} />
       <div className="flex justify-center items-center mt-10">
         <button
@@ -55,20 +55,24 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         </button>
       </div>
 
-      {transitions((style, item) =>
-        item ? (
-          <animated.div style={style}>
-            <GetDay items={weather.daily} />
-          </animated.div>
-        ) : (
-          <animated.div style={style}>
-            <GetHours items={weather.hourly} />
-          </animated.div>
-        )
-      )}
+      <div className="">
+        {transitions((style, item) =>
+          item ? (
+            <animated.div style={style}>
+              <GetDay items={weather.daily} />
+            </animated.div>
+          ) : (
+            <animated.div style={style}>
+              <GetHours items={weather.hourly} />
+            </animated.div>
+          )
+        )}
+      </div>
 
-      <InfoWeather weather={weather} />
-      <div className="p-10">
+      <div className="">
+        <InfoWeather weather={weather} />
+      </div>
+      <div className="mt-10 flex flex-wrap ">
         <CityPercentage weather={weather} units={units} setUnits={setUnits} />
       </div>
     </div>
