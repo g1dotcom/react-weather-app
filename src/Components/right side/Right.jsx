@@ -29,7 +29,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
   });
 
   return (
-    <div>
+    <div className="flex flex-col ">
       <CityButtons setQuery={setQuery} />
       <div className="flex justify-center items-center mt-10">
         <button
@@ -54,6 +54,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
           HOURLY FORECAST{" "}
         </button>
       </div>
+
       {transitions((style, item) =>
         item ? (
           <animated.div style={style}>
