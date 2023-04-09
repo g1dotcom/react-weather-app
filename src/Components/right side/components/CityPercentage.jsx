@@ -13,17 +13,18 @@ const CityPercentage = ({
   };
 
   return (
-    <div className=" w-full h-56  flex items-center justify-between flex-wrap">
-      <div className=" bg-white flex justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500 ">
-        <div className=" h-full flex flex-col items-center justify-around ">
-          <h1 className=" text-gray-400 text-base 2xl:text-xl my-6 ">Wind</h1>
-          <p className="text-6xl font-medium">
+    <div className=" w-full h-56 flex  flex-col sm:flex-row justify-center items-center">
+      <div className=" bg-white flex sm:flex-row flex-col justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500 ">
+        <div className=" h-full flex sm:flex-col flex-row items-center justify-around ">
+          <h1 className=" text-gray-400 sm:text-base text-sm 2xl:text-xl my-6 ">
+            Wind
+          </h1>
+          <p className="xl:text-4xl  sm:text-base text-sm font-medium">
             {`${speed.toFixed()}`} <span className="text-xl">km/h</span>
           </p>
           <svg
+            className="sm:w-400 h-200  "
             xmlns="http://www.w3.org/2000/svg"
-            width="500.359"
-            height="400.359"
             fill-rule="evenodd"
             clip-rule="evenodd"
             image-rendering="optimizeQuality"
@@ -46,7 +47,7 @@ const CityPercentage = ({
             ></path>
             <path fill="none" d="M0 0h6.827v6.827H0z"></path>
           </svg>
-          <h1 className="font-medium">Normal</h1>
+          <h1 className="font-medium sm:text-base text-sm">Normal</h1>
         </div>
       </div>
       <div className=" bg-white flex justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
