@@ -32,13 +32,13 @@ const CityInfo = ({
           </div>
         </div>
         <div className="flex flex-col   w-full p-5">
-          <h1 className="text-lg  font-medium font-main my-5">
+          <h1 className=" font-medium font-main 2xl:my-5 my-2 2xl:text-xl text-base">
             {formatToLocalTime(dt, timezone)}{" "}
           </h1>
           <hr />
-          <div className=" lg:flex-col flex flex-row items-center justify-center">
+          <div className=" lg:flex-col flex flex-row items-center justify-center 2xl:text-xl text-base">
             <div className="flex-col  lg:flex-row">
-              <p className="flex mx-1 mt-3">
+              <p className="flex mt-3">
                 {" "}
                 <AiOutlineCloud size={30} />
                 <h1 className="mx-2"> {`${details}`}</h1>
@@ -50,7 +50,7 @@ const CityInfo = ({
             </div>
             <div className=" flex justify-center items-center w-full truncate">
               <img
-                className="relative  bg-cover lg:w-full w-3/4 mt-10 h-32 rounded-3xl "
+                className="relative  bg-cover lg:w-full w-3/4 2xl:mt-10 mt-2 2xl:h-36 h-24 rounded-3xl "
                 src="https://i.pinimg.com/600x315/66/81/ee/6681eea42fc9c35376a8171f0f82e97f.jpg"
                 alt=""
               />

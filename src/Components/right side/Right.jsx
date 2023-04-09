@@ -47,7 +47,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
           className={`cursor-pointer hover:opacity-50 ${
             selected
               ? "text-gray-500 font-main 2xl:text-xl text-sm font-bold  "
-              : "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300 2xl:text-xl text-sm font-bold "
+              : "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300 2xl:text-xl text-sm  "
           }`}
           onClick={handleclick}
         >

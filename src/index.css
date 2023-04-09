@@ -36,7 +36,7 @@
 }
 
 /*  responsive */
-@media (max-width: 1268px) {
+@media (max-width: 1260px) {
   .weather-card {
     width: 130px;
   }
