@@ -36,24 +36,28 @@ const CityInfo = ({
             {formatToLocalTime(dt, timezone)}{" "}
           </h1>
           <hr />
-          <p className="flex mx-1 mt-3">
-            {" "}
-            <AiOutlineCloud size={30} />
-            <h1 className="mx-2"> {`${details}`}</h1>
-          </p>
-          <p className="flex mx-1 my-1">
-            <MdGrain size={30} />
-            <h1 className="mx-2"> {`${humidity}`}%</h1>
-          </p>
-          <div className=" flex justify-center items-center w-full truncate">
-            <img
-              className="relative bg-cover w-full mt-10 h-32 rounded-3xl "
-              src="https://i.pinimg.com/600x315/66/81/ee/6681eea42fc9c35376a8171f0f82e97f.jpg"
-              alt=""
-            />
-            <h1 className="absolute mb-10 text-gray-500 text-2xl font-semibold truncate">
-              {name},{country}
-            </h1>
+          <div className=" lg:flex-col flex flex-row items-center justify-center">
+            <div className="flex-col  lg:flex-row">
+              <p className="flex mx-1 mt-3">
+                {" "}
+                <AiOutlineCloud size={30} />
+                <h1 className="mx-2"> {`${details}`}</h1>
+              </p>
+              <p className="flex mx-1 my-1">
+                <MdGrain size={30} />
+                <h1 className="mx-2"> {`${humidity}`}%</h1>
+              </p>
+            </div>
+            <div className=" flex justify-center items-center w-full truncate">
+              <img
+                className="relative  bg-cover lg:w-full w-1/2 mt-10 h-32 rounded-3xl "
+                src="https://i.pinimg.com/600x315/66/81/ee/6681eea42fc9c35376a8171f0f82e97f.jpg"
+                alt=""
+              />
+              <h1 className="absolute mb-10 text-gray-500 text-2xl font-semibold truncate">
+                {name},{country}
+              </h1>
+            </div>
           </div>
         </div>
       </div>
