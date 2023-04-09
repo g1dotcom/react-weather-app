@@ -1,8 +1,8 @@
 import React from "react";
 
 //components
-import CityInput from "./CityInput";
-import CityInfo from "./CityInfo";
+import CityInput from "./components/CityInput";
+import CityInfo from "./components/CityInfo";
 
 const Left = ({ weather, setQuery, units, setUnits }) => {
   return (

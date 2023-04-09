@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 //components
-import Left from "../Components/Left";
-import Right from "../Components/Right";
+import Left from "../Components/left side/Left";
+import Right from "../Components/right side/Right";
 import getFormattedWeatherData from "../services/weatherService";
 
 const Main = () => {

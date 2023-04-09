@@ -1,5 +1,5 @@
 import React from "react";
-import { formatToLocalTime } from "../services/weatherService";
+import { formatToLocalTime } from "../../../services/weatherService";
 import { AiOutlineCloud } from "react-icons/ai";
 import { MdGrain } from "react-icons/md";
 
@@ -10,17 +10,22 @@ const CityInfo = ({
     <div className="w-full h-full">
       <div className="flex flex-col justify-between items-center">
         {" "}
-        <div className="weather-card sunny  mt-10 bg-gray-500 ">
-          <div className="sun "></div>
-          <div className="cloud">
-            <div className="animasyon my-4 mx-4"></div>
-            <div className="animasyon my-8 mx-8"></div>
-            <div className="animasyon my-12 mx-12"></div>
-            <div className="animasyon my-8 mx-16"></div>
+        <div className="weather-card sunny   mt-10 bg-gray-500 ">
+          <div className="sun"></div>
+
+          <div className="cloud ">
+            {details === "Rain" ? (
+              <div>
+                <div className="animasyon my-4 mx-4"></div>
+                <div className="animasyon my-8 mx-8"></div>
+                <div className="animasyon my-12 mx-12"></div>
+                <div className="animasyon my-8 mx-16"></div>
+              </div>
+            ) : null}
           </div>
           <div className="info font-main">
-            <h2>Sunny</h2>
-            <p>It's a beautiful day.</p>
+            <h2>{details}</h2>
+
             <h1 className="text-2xl font-medium font-main font-mono">
               <span className="text-lg font-main"> {name}</span>{" "}
               {`${temp.toFixed()}`}°c

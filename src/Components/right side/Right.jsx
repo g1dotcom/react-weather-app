@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 //components
-import CityButtons from "./CityButtons";
-import GetDay from "./getDay";
-import InfoWeather from "./infoWeather";
-import GetHours from "./GetHours";
+import CityButtons from "./components/CityButtons";
+import GetDay from "./components/getDay";
+import InfoWeather from "./components/infoWeather";
+import GetHours from "./components/GetHours";
 //react spring
 import { useTransition, animated } from "react-spring";
-import CityPercentage from "./CityPercentage";
+import CityPercentage from "./components/CityPercentage";
 
 const Right = ({ weather, setQuery, units, setUnits }) => {
   const [selected, setSelected] = useState("true");

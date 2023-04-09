@@ -6,7 +6,7 @@ import { FiSunset } from "react-icons/fi";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { HiOutlineSun } from "react-icons/hi";
-import { formatToLocalTime } from "../services/weatherService";
+import { formatToLocalTime } from "../../../services/weatherService";
 
 const infoWeather = ({
   weather: { sunrise, sunset, temp_min, temp_max, timezone },

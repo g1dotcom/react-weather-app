@@ -78,14 +78,6 @@
   animation: cloud 5s infinite linear;
 }
 
-.weather-card.rainy .cloud {
-  animation: rain 1s infinite linear;
-}
-
-.weather-card.snowy .cloud {
-  animation: snow 5s infinite linear;
-}
-
 @keyframes sun {
   from {
     transform: rotate(0);
@@ -124,7 +116,6 @@
 
 .animasyon {
   width: 10px;
-
   height: 10px;
   background: rgb(116, 197, 218);
   position: absolute;
