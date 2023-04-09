@@ -14,9 +14,9 @@ const CityPercentage = ({
 
   return (
     <div className=" w-full h-56  flex items-center justify-between flex-wrap">
-      <div className=" bg-white flex justify-around  items-center mx-4 sm:w-1/6 w-12 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
+      <div className=" bg-white flex justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500 ">
         <div className=" h-full flex flex-col items-center justify-around ">
-          <h1 className=" text-gray-400 font-medium mb-8">Wind</h1>
+          <h1 className=" text-gray-400 text-base 2xl:text-xl my-6 ">Wind</h1>
           <p className="text-6xl font-medium">
             {`${speed.toFixed()}`} <span className="text-xl">km/h</span>
           </p>
@@ -49,8 +49,8 @@ const CityPercentage = ({
           <h1 className="font-medium">Normal</h1>
         </div>
       </div>
-      <div className=" bg-white flex justify-around sm items-center mx-4 w-1/6 h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
-        <div className="w-1/2 h-full flex flex-col items-center justify-around ">
+      <div className=" bg-white flex justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
+        <div className="w-1/2 h-full flex flex-col items-center justify-around text-base 2xl:text-xl ">
           <h1 className="mx-5 text-gray-400 font-medium">Humidity</h1>
           <div
             className="radial-progress bg-custom-red"
@@ -80,8 +80,8 @@ const CityPercentage = ({
           </svg>
         </div>
       </div>
-      <div className=" bg-white flex items-center w-1/6 sm h-full mx-4 rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500">
-        <div className="w-1/2  h-full flex flex-col items-center justify-around ">
+      <div className=" bg-white flex items-center 2xl:w-1/6 w-1/6 h-full mx-4 rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500">
+        <div className="w-1/2  h-full flex flex-col items-center justify-around  text-base 2xl:text-xl">
           <h1 className=" text-gray-400 font-medium">Real Fell </h1>
           <div className="text-3xl font-medium flex justify-center items-center">
             <BsThermometerSun className="mx-1" />
@@ -118,11 +118,11 @@ const CityPercentage = ({
           ;
         </div>
       </div>
-      <div className="bg-white w-1/6 h-full rounded-3xl sm  flex flex-col mx-4 justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
+      <div className="bg-white 2xl:w-1/6 w-1/6 h-full rounded-3xl   flex flex-col mx-4 justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
         <div className=" form-control ">
           <button
             name="metric"
-            className="btn btn-active px-10 font-main bg-gray-400 rounded-full text-black hover:text-white"
+            className="btn btn-active 2xl:px-10 px-6 text-sm 2xl:text-xl font-main bg-gray-400 rounded-full text-black hover:text-white"
             onClick={handleUnitsChange}
           >
             Celsius
@@ -130,10 +130,10 @@ const CityPercentage = ({
         </div>
         <h1 className="text-xl font-main font-medium ">Choose Value </h1>
 
-        <div className="form-control bg-gray-100">
+        <div className="form-control ">
           <button
             name="imperial"
-            className="btn btn-active px-10 font-main bg-gray-600 rounded-full hover:bg-gray-400 hover:text-black"
+            className="btn btn-active 2xl:px-10 px-4 text-sm 2xl:text-xl font-main bg-gray-400 rounded-full text-black hover:text-white"
             onClick={handleUnitsChange}
           >
             Fahrenheit

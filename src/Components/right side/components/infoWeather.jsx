@@ -13,8 +13,8 @@ const infoWeather = ({
 }) => {
   return (
     <div
-      className="bg-main-left  flex flex-col sm:flex-row justify-start  md:justify-between  py-2 mx-16 sm:px-10 shadow-lg shadow-gray-500
-     hover:bg-gray-200  transition-all duration-500 flex-wrap w-full 2xl:text-xl text-base mt-4 "
+      className="bg-main-left  flex sm:flex-row justify-center  md:justify-between  py-2 mx-16 sm:px-10 shadow-lg shadow-gray-500
+     hover:bg-gray-200  transition-all duration-500 flex-wrap w-full 2xl:text-xl text-sm mt-4 rounded-xl"
     >
       <div className="flex justify-center items-center md:mx-2 ">
         <WiSunrise size={25} className="mx-2" />
@@ -23,7 +23,7 @@ const infoWeather = ({
           {formatToLocalTime(sunrise, timezone, "hh:mm a")}
         </span>
       </div>
-      <div className="flex justify-center items-center md:mx-2 ">
+      <div className="flex justify-center items-center md:mx-6 ">
         <FiSunset className="mx-2" />
         Set:{" "}
         <span className="font-bold mx-2">
@@ -36,7 +36,7 @@ const infoWeather = ({
         <AiOutlineArrowUp />
         High: <span className="font-bold mx-2">{`${temp_min.toFixed()}`}°</span>
       </div>
-      <div className="flex justify-center items-center md:mx-6">
+      <div className="flex justify-center items-center md:mx-2">
         <HiOutlineSun />
         <AiOutlineArrowDown />
         Low: <span className="font-bold mx-2">{`${temp_max.toFixed()}`}°</span>
