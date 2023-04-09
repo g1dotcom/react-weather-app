@@ -31,23 +31,23 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
   return (
     <div className="flex flex-col justify-center items-center w-full ">
       <CityButtons setQuery={setQuery} />
-      <div className="flex justify-center items-center 2xl:mt-10 ">
+      <div className="flex justify-center items-center 2xl:mt-10">
         <button
           className={` cursor-pointer hover:opacity-50 ${
             selected
-              ? "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300"
-              : "text-gray-400 font-main"
+              ? "text-gray-500 underline underline-offset-8 shadow-xl  font-main shadow-slate-300  2xl:text-xl text-sm font-bold "
+              : "text-gray-400 font-main  2xl:text-xl text-md 2xl:text-xl text-sm font-bold "
           }`}
           onClick={handleclick}
         >
-          DAILY FORECAST{" "}
+          DAILY FORECAST
         </button>
         <span className="mx-5">||</span>
         <button
           className={`cursor-pointer hover:opacity-50 ${
             selected
-              ? "text-gray-500 font-main "
-              : "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300"
+              ? "text-gray-500 font-main 2xl:text-xl text-sm font-bold  "
+              : "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300 2xl:text-xl text-sm font-bold "
           }`}
           onClick={handleclick}
         >
@@ -69,7 +69,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         )}
       </div>
 
-      <div className="">
+      <div className="flex items-center justify-center">
         <InfoWeather weather={weather} />
       </div>
       <div className="mt-10 flex flex-wrap ">

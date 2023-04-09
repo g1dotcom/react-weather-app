@@ -50,7 +50,7 @@ const CityInfo = ({
             </div>
             <div className=" flex justify-center items-center w-full truncate">
               <img
-                className="relative  bg-cover lg:w-full w-1/2 mt-10 h-32 rounded-3xl "
+                className="relative  bg-cover lg:w-full w-3/4 mt-10 h-32 rounded-3xl "
                 src="https://i.pinimg.com/600x315/66/81/ee/6681eea42fc9c35376a8171f0f82e97f.jpg"
                 alt=""
               />

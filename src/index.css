@@ -39,7 +39,6 @@
 @media (max-width: 1268px) {
   .weather-card {
     width: 130px;
-    height: 180px;
   }
   .weather-card .sun {
     width: 100px;
