@@ -27,7 +27,7 @@ const CityInput = ({ setQuery }) => {
   };
 
   return (
-    <div className="h-full max-w-full mt-10 flex justify-center items-center">
+    <div className="h-full max-w-full mt-14 flex justify-center items-center">
       <div className="h-full max-w-full flex flex-col items-center justify-center">
         {" "}
         <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-5 mt-2 ">
@@ -47,12 +47,12 @@ const CityInput = ({ setQuery }) => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap justify-around items-center mb-1 mt-2">
+        <div className="flex flex-wrap justify-around items-center mb-6 mt-2">
           <h1 className="font-main 2xl:text-xl text-base text-center">
             Get the weather for where I live
           </h1>
-          <button className="bg-gray-200  rounded-full p-2 mr-2 hover:bg-gray-300 hover:scale-105 cursor-pointer">
-            <GoLocation onClick={handleLocationClick} size={25} />
+          <button className="bg-gray-800 text-white  rounded-full p-2 mr-2 hover:bg-gray-300 hover:scale-105 cursor-pointer">
+            <GoLocation onClick={handleLocationClick} size={20} />
           </button>
         </div>
         <hr />

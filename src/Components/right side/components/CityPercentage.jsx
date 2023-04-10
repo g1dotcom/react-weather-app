@@ -134,7 +134,7 @@ const CityPercentage = ({
       </div>
       <div
         className="bg-white flex md:flex-row flex-col justify-around  items-center mx-4 2xl:w-1/4 md:w-1/6 w-full
-      h-20 md:h-full  rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500"
+      h-20 md:h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500"
       >
         <div className=" form-control ">
           <button
