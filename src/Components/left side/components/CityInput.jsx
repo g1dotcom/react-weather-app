@@ -27,10 +27,10 @@ const CityInput = ({ setQuery }) => {
   };
 
   return (
-    <div className="h-full max-w-full mt-14 flex justify-center items-center">
+    <div className="h-full max-w-full sm:mt-14 mt-6 flex justify-center items-center">
       <div className="h-full max-w-full flex flex-col items-center justify-center">
         {" "}
-        <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-5 mt-2 ">
+        <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-5 sm:mt-2 ">
           <input
             value={city}
             onChange={(e) => setCity(e.currentTarget.value)}

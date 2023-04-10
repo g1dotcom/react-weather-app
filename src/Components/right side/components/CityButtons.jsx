@@ -33,7 +33,7 @@ const CityButtons = ({ setQuery }) => {
   ];
 
   return (
-    <div className="flex items-center flex-wrap justify-center 2xl:my-6 my-2 ">
+    <div className="flex items-center flex-wrap justify-center 2xl:my-2  my-4 ">
       {cities.map((city) => (
         <button
           onClick={() => setQuery({ q: city.title })}

@@ -32,7 +32,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
   return (
     <div className="flex flex-col justify-center items-center w-full ">
       <CityButtons setQuery={setQuery} />
-      <div className="flex justify-center items-center 2xl:mt-10">
+      <div className="flex justify-center items-center 2xl:my-4 mt-2 mb-2">
         <button
           className={` cursor-pointer hover:opacity-50 ${
             selected

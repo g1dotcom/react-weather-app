@@ -68,7 +68,7 @@ const CityBox = ({
         >
           Celsius
         </button>
-        <div className="my-4">
+        <div className="my-4 flex justify-center">
           <FontAwesomeIcon icon={faArrowUp} className="mx-4" />
           <FontAwesomeIcon icon={faArrowDown} className="mx-4" />
         </div>
