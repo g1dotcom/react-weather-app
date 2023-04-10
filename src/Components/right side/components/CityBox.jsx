@@ -60,7 +60,7 @@ const CityBox = ({
         <FontAwesomeIcon icon={faTemperatureHalf} />
         <h1 className="md:my-4 text-gray-400">{name}</h1>
       </div>
-      <div className="bg-white my-2 w-full h-full flex md:flex-col items-center justify-evenly  mx-1 py-5 lg:py-12 rounded-full shadow-lg shadow-gray-400 hover:scale-105 transition-all duration-500">
+      <div className="bg-white my-2 w-full h-full flex md:flex-col items-center justify-evenly  sm:mx-1 py-2 sm:py-5 lg:py-12 rounded-full shadow-lg shadow-gray-400 hover:scale-105 transition-all duration-500">
         <button
           name="metric"
           className="btn btn-active bg-gray-300 border-none"
@@ -69,8 +69,8 @@ const CityBox = ({
           Celsius
         </button>
         <div className="my-4 flex justify-center">
-          <FontAwesomeIcon icon={faArrowUp} className="mx-4" />
-          <FontAwesomeIcon icon={faArrowDown} className="mx-4" />
+          <FontAwesomeIcon icon={faArrowUp} className="sm:mx-4 mx-2" />
+          <FontAwesomeIcon icon={faArrowDown} className="sm:mx-4 mx-2" />
         </div>
         <button
           name="imperial"
