@@ -34,6 +34,9 @@ const CityInput = ({ setQuery }) => {
           <input
             value={city}
             onChange={(e) => setCity(e.currentTarget.value)}
+            onKeyPress={(e) => {
+              if (e.key === "Enter") handleSearchClick();
+            }}
             type="text"
             placeholder="Search for places"
             className=" focus:outline-none 
