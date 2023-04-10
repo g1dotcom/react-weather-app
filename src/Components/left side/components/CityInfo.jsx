@@ -10,7 +10,7 @@ const CityInfo = ({
     <div className="w-full h-full">
       <div className="flex flex-col justify-between items-center">
         {" "}
-        <div className="weather-card sunny  2xl:mt-10 mt-6 bg-gray-500  ">
+        <div className="weather-card sunny  2xl:mt-10 sm:mt-6 bg-gray-500  ">
           <div className="sun"></div>
           <div className="cloud ">
             {details === "Rain" ? (

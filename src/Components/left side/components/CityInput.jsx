@@ -50,7 +50,7 @@ const CityInput = ({ setQuery }) => {
             />
           </div>
         </div>
-        <div className="flex flex-wrap justify-around items-center mb-6 mt-2">
+        <div className="flex flex-wrap justify-around items-center sm:mb-6 mt-2">
           <h1 className="font-main 2xl:text-xl text-base text-center">
             Get the weather for where I live
           </h1>

@@ -56,7 +56,7 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         </button>
       </div>
 
-      <div className="">
+      <div className="w-full h-full flex justify-center">
         {transitions((style, item) =>
           item ? (
             <animated.div style={style}>
