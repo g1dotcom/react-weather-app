@@ -10,7 +10,7 @@ const CityInfo = ({
     <div className="w-full h-full">
       <div className="flex flex-col justify-between items-center">
         {" "}
-        <div className="weather-card sunny  2xl:mt-12 mt-6 bg-gray-500  ">
+        <div className="weather-card sunny  2xl:mt-10 mt-6 bg-gray-500  ">
           <div className="sun"></div>
           <div className="cloud ">
             {details === "Rain" ? (
@@ -22,7 +22,7 @@ const CityInfo = ({
               </div>
             ) : null}
           </div>
-          <div className="info font-main">
+          <div className="info font-main ">
             <h2 className="2xl:text-2xl text-base">{details}</h2>
 
             <h1 className="2xl:text-2xl text-base font-medium font-main ">
@@ -31,8 +31,8 @@ const CityInfo = ({
             </h1>
           </div>
         </div>
-        <div className="flex flex-col   w-full 2xl:mt-12 mt-1">
-          <h1 className=" font-medium font-main 2xl:my-5 my-2 2xl:text-xl text-base">
+        <div className="flex flex-col   w-full 2xl:mt-8 mt-1">
+          <h1 className="  font-main 2xl:my-5 my-2 text-center mx-2 2xl:text-xl text-base font-bold">
             {formatToLocalTime(dt, timezone)}{" "}
           </h1>
           <hr />

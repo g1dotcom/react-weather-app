@@ -1,6 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
+import { faTemperatureHalf } from "@fortawesome/free-solid-svg-icons";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const CityBox = ({
   weather: { speed, humidity, feels_like, name },
@@ -40,7 +44,7 @@ const CityBox = ({
             <span className="font-bold">%</span>
           </div>
         </div>
-        <FontAwesomeIcon icon={faWind} />
+        <FontAwesomeIcon icon={faCloud} />
         <h1 className="md:my-4 text-gray-400">{name}</h1>
       </div>
       <div className="bg-white my-2 w-full h-full flex md:flex-col items-center justify-evenly  mx-1 py-5 rounded-full shadow-lg shadow-gray-400 hover:scale-105 transition-all duration-500">
@@ -53,21 +57,24 @@ const CityBox = ({
             <span className="font-bold"></span>
           </div>
         </div>
-        <FontAwesomeIcon icon={faWind} />
+        <FontAwesomeIcon icon={faTemperatureHalf} />
         <h1 className="md:my-4 text-gray-400">{name}</h1>
       </div>
-      <div className="bg-white my-2 w-full h-full flex md:flex-col items-center justify-evenly  mx-1 py-5 lg:py-16 rounded-full shadow-lg shadow-gray-400 hover:scale-105 transition-all duration-500">
+      <div className="bg-white my-2 w-full h-full flex md:flex-col items-center justify-evenly  mx-1 py-5 lg:py-12 rounded-full shadow-lg shadow-gray-400 hover:scale-105 transition-all duration-500">
         <button
           name="metric"
-          className="btn btn-active"
+          className="btn btn-active bg-gray-300 border-none"
           onClick={handleUnitsChange}
         >
           Celsius
         </button>
-        <FontAwesomeIcon icon={faWind} />
+        <div className="my-4">
+          <FontAwesomeIcon icon={faArrowUp} className="mx-4" />
+          <FontAwesomeIcon icon={faArrowDown} className="mx-4" />
+        </div>
         <button
           name="imperial"
-          className="btn btn-active "
+          className="btn btn-active bg-gray-300 border-none"
           onClick={handleUnitsChange}
         >
           Fahrenheit

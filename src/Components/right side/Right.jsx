@@ -6,7 +6,7 @@ import InfoWeather from "./components/infoWeather";
 import GetHours from "./components/GetHours";
 //react spring
 import { useTransition, animated } from "react-spring";
-import CityPercentage from "./components/CityPercentage";
+
 import CityBox from "./components/CityBox";
 
 const Right = ({ weather, setQuery, units, setUnits }) => {
