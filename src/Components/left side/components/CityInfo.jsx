@@ -54,7 +54,7 @@ const CityInfo = ({
                 src="https://i.pinimg.com/600x315/66/81/ee/6681eea42fc9c35376a8171f0f82e97f.jpg"
                 alt=""
               />
-              <h1 className="absolute mb-10 text-gray-500 text-2xl font-semibold truncate">
+              <h1 className="absolute mb-10 text-gray-500 sm:text-2xl font-semibold truncate">
                 {name},{country}
               </h1>
             </div>
