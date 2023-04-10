@@ -13,9 +13,12 @@ const CityPercentage = ({
   };
 
   return (
-    <div className=" w-full h-56 flex  flex-col sm:flex-row justify-center items-center">
-      <div className=" bg-white flex sm:flex-row flex-col justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500 ">
-        <div className=" h-full flex sm:flex-col flex-row items-center justify-around ">
+    <div className=" w-full flex-wrap h-56 flex  flex-row justify-center sm:justify-between items-center bg-black">
+      <div
+        className=" bg-white flex md:flex-row flex-col md:justify-around justify-center  md:items-center mx-4 2xl:w-1/4 md:w-1/6 w-full
+      h-20 md:h-full  rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500 "
+      >
+        <div className="  flex md:flex-col flex-row items-center justify-around ">
           <h1 className=" text-gray-400 sm:text-base text-sm 2xl:text-xl my-6 ">
             Wind
           </h1>
@@ -23,7 +26,7 @@ const CityPercentage = ({
             {`${speed.toFixed()}`} <span className="text-xl">km/h</span>
           </p>
           <svg
-            className="sm:w-400 h-200  "
+            className="w-96 h-48"
             xmlns="http://www.w3.org/2000/svg"
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -50,7 +53,10 @@ const CityPercentage = ({
           <h1 className="font-medium sm:text-base text-sm">Normal</h1>
         </div>
       </div>
-      <div className=" bg-white flex justify-around  items-center mx-4 2xl:w-1/6 w-1/6  h-full rounded-3xl shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500 ">
+      <div
+        className=" bg-white flex md:flex-row flex-col justify-around  items-center mx-4 2xl:w-1/4 md:w-1/6 w-full
+      h-20 md:h-full  rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500 "
+      >
         <div className="w-1/2 h-full flex flex-col items-center justify-around text-base 2xl:text-xl ">
           <h1 className="mx-5 text-gray-400 font-medium">Humidity</h1>
           <div
@@ -65,7 +71,11 @@ const CityPercentage = ({
           <h1 className="font-medium">Normal</h1>
         </div>
         <div className="w-1/2 h-full flex justify-center items-center">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78 64" id="drop">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 110 64"
+            id="drop"
+          >
             <path
               fill="#3EBBDD"
               d="M36 2c-2.906 0-5.654 2.892-8.177 8.618l-.839 2.04a56.93 56.93 0 0 0-.764 2.114l-.609 1.894C24.024 21.862 23 27.489 23 31c0 8.271 5.832 15 13 15s13-6.729 13-15c0-7.229-5.25-29-13-29z"
@@ -81,7 +91,10 @@ const CityPercentage = ({
           </svg>
         </div>
       </div>
-      <div className=" bg-white flex items-center 2xl:w-1/6 w-1/6 h-full mx-4 rounded-3xl shadow-xl shadow-gray-600 hover:scale-105 transition-all duration-500">
+      <div
+        className=" bg-white flex md:flex-row flex-col justify-around  items-center mx-4 2xl:w-1/4 md:w-1/6 w-full
+      h-20 md:h-full  rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500"
+      >
         <div className="w-1/2  h-full flex flex-col items-center justify-around  text-base 2xl:text-xl">
           <h1 className=" text-gray-400 font-medium">Real Fell </h1>
           <div className="text-3xl font-medium flex justify-center items-center">
@@ -119,7 +132,10 @@ const CityPercentage = ({
           ;
         </div>
       </div>
-      <div className="bg-white 2xl:w-1/6 w-1/6 h-full rounded-3xl   flex flex-col mx-4 justify-around items-center shadow-xl shadow-gray-600 hover:scale-105  transition-all duration-500">
+      <div
+        className="bg-white flex md:flex-row flex-col justify-around  items-center mx-4 2xl:w-1/4 md:w-1/6 w-full
+      h-20 md:h-full  rounded-3xl shadow-xl shadow-gray-600 hover:scale-105   transition-all duration-500"
+      >
         <div className=" form-control ">
           <button
             name="metric"

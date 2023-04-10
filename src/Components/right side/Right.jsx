@@ -7,6 +7,7 @@ import GetHours from "./components/GetHours";
 //react spring
 import { useTransition, animated } from "react-spring";
 import CityPercentage from "./components/CityPercentage";
+import CityBox from "./components/CityBox";
 
 const Right = ({ weather, setQuery, units, setUnits }) => {
   const [selected, setSelected] = useState("true");
@@ -72,8 +73,8 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
       <div className="flex items-center justify-center">
         <InfoWeather weather={weather} />
       </div>
-      <div className="mt-10 flex flex-wrap ">
-        <CityPercentage weather={weather} units={units} setUnits={setUnits} />
+      <div className="mt-10 w-full h-full ">
+        <CityBox weather={weather} units={units} setUnits={setUnits} />
       </div>
     </div>
   );
