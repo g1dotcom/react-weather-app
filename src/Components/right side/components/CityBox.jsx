@@ -27,7 +27,9 @@ const CityBox = ({
               {" "}
               {`${speed.toFixed()}`}
             </h1>
-            <span className="font-bold">km/h</span>
+            <span className="font-bold">
+              {units === "metric" ? "kmh" : "mph"}
+            </span>
           </div>
         </div>
         <FontAwesomeIcon icon={faWind} />
