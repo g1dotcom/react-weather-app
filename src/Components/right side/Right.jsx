@@ -60,11 +60,11 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         {transitions((style, item) =>
           item ? (
             <animated.div style={style}>
-              <GetDay items={weather.daily} />
+              <GetDay items={weather.daily} units={units} />
             </animated.div>
           ) : (
             <animated.div style={style}>
-              <GetHours items={weather.hourly} />
+              <GetHours items={weather.hourly} units={units} />
             </animated.div>
           )
         )}
