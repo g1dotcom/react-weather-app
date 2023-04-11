@@ -4,6 +4,8 @@ import React, { useState } from "react";
 
 import { GoLocation } from "react-icons/go";
 import { AiOutlineSearch } from "react-icons/ai";
+import { faCloud } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CityInput = ({ setQuery }) => {
   //UseState for the input
@@ -29,8 +31,12 @@ const CityInput = ({ setQuery }) => {
   return (
     <div className="h-full max-w-full sm:mt-14 mt-6 flex justify-center items-center">
       <div className="h-full max-w-full flex flex-col items-center justify-center">
-        {" "}
-        <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-5 sm:mt-2 ">
+        <h1 className="my-4 font-bold bg-gray-500 w-full text-white rounded-xl text-center text-base xl:text-xl">
+          <FontAwesomeIcon icon={faCloud} className="mr-1" />
+          Weather App
+          <FontAwesomeIcon icon={faCloud} className="ml-1" />
+        </h1>
+        <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-4 sm:mt-2 ">
           <input
             value={city}
             onChange={(e) => setCity(e.currentTarget.value)}
@@ -53,10 +59,10 @@ const CityInput = ({ setQuery }) => {
         <div className="flex flex-wrap justify-around items-center sm:mb-6 mt-2">
           <h1 className="font-main 2xl:text-xl text-base text-center">
             Get the weather for where I live
+            <button className="bg-gray-800  text-white  rounded-full p-2 mr-2 ml-2 md:mb-6 hover:bg-gray-300 hover:scale-105 cursor-pointer">
+              <GoLocation onClick={handleLocationClick} size={20} />
+            </button>
           </h1>
-          <button className="bg-gray-800 text-white  rounded-full p-2 mr-2 hover:bg-gray-300 hover:scale-105 cursor-pointer">
-            <GoLocation onClick={handleLocationClick} size={20} />
-          </button>
         </div>
         <hr />
       </div>

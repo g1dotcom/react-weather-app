@@ -27,7 +27,7 @@ const CityInfo = ({
 
             <h1 className="2xl:text-2xl text-base font-medium font-main ">
               <span className="2xl:text-2xl text-base font-main"> {name}</span>{" "}
-              {`${temp.toFixed()}`}°c
+              {`${temp.toFixed()}`}°C
             </h1>
           </div>
         </div>
