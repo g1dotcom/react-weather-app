@@ -5,6 +5,7 @@ import { MdGrain } from "react-icons/md";
 
 const CityInfo = ({
   weather: { dt, timezone, name, details, humidity, temp, country },
+  units,
 }) => {
   return (
     <div className="w-full h-full">
@@ -27,7 +28,7 @@ const CityInfo = ({
 
             <h1 className="2xl:text-2xl text-base font-medium font-main ">
               <span className="2xl:text-2xl text-base font-main"> {name}</span>{" "}
-              {`${temp.toFixed()}`}°C
+              {`${temp.toFixed()}`} {units === "metric" ? "°C" : "°F"}
             </h1>
           </div>
         </div>

@@ -11,7 +11,7 @@ const Left = ({ weather, setQuery, units, setUnits }) => {
         <CityInput setQuery={setQuery} />
       </div>
       <div className="h-4/6 ">
-        <CityInfo weather={weather} />
+        <CityInfo weather={weather} units={units} />
       </div>
       <div className="h-1/6 rounded-3xl  "></div>
     </div>

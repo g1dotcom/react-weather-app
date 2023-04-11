@@ -29,14 +29,14 @@ const CityInput = ({ setQuery }) => {
   };
 
   return (
-    <div className="h-full max-w-full sm:mt-14 mt-6 flex justify-center items-center">
+    <div className="h-full max-w-full sm:mt-14 mt-2 flex justify-center items-center">
       <div className="h-full max-w-full flex flex-col items-center justify-center">
-        <h1 className="my-4 font-bold bg-gray-500 w-full text-white rounded-xl text-center text-base xl:text-xl">
+        <h1 className="my-4 font-bold bg-gray-500 w-full text-white rounded-xl text-center text-base xl:text-lg 2xl:text-xl">
           <FontAwesomeIcon icon={faCloud} className="mr-1" />
           Weather App
           <FontAwesomeIcon icon={faCloud} className="ml-1" />
         </h1>
-        <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-4 sm:mt-2 ">
+        <div className="h-1/6  max-w-full flex flex-row items-center justify-center mb-4 sm:my-4 ">
           <input
             value={city}
             onChange={(e) => setCity(e.currentTarget.value)}
@@ -46,7 +46,7 @@ const CityInput = ({ setQuery }) => {
             type="text"
             placeholder="Search for places"
             className=" focus:outline-none 
-          input max-w-full   bg-gray-100 "
+          input max-w-full   bg-gray-300 "
           />
           <div className="">
             <AiOutlineSearch
