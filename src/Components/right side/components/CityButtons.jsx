@@ -42,6 +42,7 @@ const CityButtons = ({ setQuery }) => {
           {city.title}
         </button>
       ))}
+      <div className="ml-8"></div>
     </div>
   );
 };
