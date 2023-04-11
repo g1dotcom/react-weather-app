@@ -9,7 +9,14 @@ import { useTransition, animated } from "react-spring";
 
 import CityBox from "./components/CityBox";
 
-const Right = ({ weather, setQuery, units, setUnits }) => {
+const Right = ({
+  weather,
+  setQuery,
+  units,
+  setUnits,
+  handleDarkMode,
+  darkMode,
+}) => {
   const [selected, setSelected] = useState("true");
   const [change, setChange] = useState("false");
 
@@ -31,7 +38,11 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
 
   return (
     <div className="flex flex-col justify-center items-center w-full ">
-      <CityButtons setQuery={setQuery} />
+      <CityButtons
+        setQuery={setQuery}
+        handleDarkMode={handleDarkMode}
+        darkMode={darkMode}
+      />
       <div className="flex justify-center items-center 2xl:my-4 mt-2 mb-2">
         <button
           className={` cursor-pointer hover:opacity-50 ${
@@ -60,11 +71,15 @@ const Right = ({ weather, setQuery, units, setUnits }) => {
         {transitions((style, item) =>
           item ? (
             <animated.div style={style}>
-              <GetDay items={weather.daily} units={units} />
+              <GetDay items={weather.daily} units={units} darkMode={darkMode} />
             </animated.div>
           ) : (
             <animated.div style={style}>
-              <GetHours items={weather.hourly} units={units} />
+              <GetHours
+                items={weather.hourly}
+                units={units}
+                darkMode={darkMode}
+              />
             </animated.div>
           )
         )}

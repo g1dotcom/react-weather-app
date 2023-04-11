@@ -1,6 +1,7 @@
 import React from "react";
+import DarkMode from "./DarkMode";
 
-const CityButtons = ({ setQuery }) => {
+const CityButtons = ({ setQuery, handleDarkMode, darkMode }) => {
   const cities = [
     {
       id: 1,
@@ -37,12 +38,18 @@ const CityButtons = ({ setQuery }) => {
       {cities.map((city) => (
         <button
           onClick={() => setQuery({ q: city.title })}
-          className="bg-main-left hover:bg-slate-100 text-slate-900 2xl:font-semibold 2xl:text-xl text-base font-medium hover:text-slate-900 py-2 sm:px-4 px-1 border border-slate-200 hover:border-transparent rounded mx-2 my-2"
+          className={`${
+            darkMode
+              ? "dark-right-button border-none text-white"
+              : "bg-main-left"
+          } hover:bg-slate-100 text-slate-900 2xl:font-semibold 2xl:text-xl text-base font-medium hover:text-slate-900 py-2 sm:px-4 px-1 border border-slate-200 hover:border-transparent rounded mx-2 my-2 `}
         >
           {city.title}
         </button>
       ))}
-      <div className="ml-8"></div>
+      <div className="ml-8">
+        <DarkMode handleDarkMode={handleDarkMode} />
+      </div>
     </div>
   );
 };
