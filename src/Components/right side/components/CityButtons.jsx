@@ -47,6 +47,7 @@ const CityButtons = ({ setQuery, handleDarkMode, darkMode }) => {
           {city.title}
         </button>
       ))}
+
       <div className="ml-8">
         <DarkMode handleDarkMode={handleDarkMode} />
       </div>
