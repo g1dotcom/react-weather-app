@@ -6,12 +6,17 @@ import { MdGrain } from "react-icons/md";
 const CityInfo = ({
   weather: { dt, timezone, name, details, humidity, temp, country },
   units,
+  darkMode,
 }) => {
   return (
     <div className="w-full h-full">
       <div className="flex flex-col justify-between items-center">
         {" "}
-        <div className="weather-card sunny  2xl:mt-10 sm:mt-6 bg-gray-500  ">
+        <div
+          className={`weather-card sunny  2xl:mt-10 sm:mt-6 ${
+            darkMode ? "bg-gray-800" : "bg-gray-500"
+          }`}
+        >
           <div className="sun"></div>
           <div className="cloud ">
             {details === "Rain" ? (

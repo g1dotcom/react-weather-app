@@ -20,7 +20,7 @@ const Main = () => {
   }, [query, units]);
 
   // dark mode
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -28,7 +28,11 @@ const Main = () => {
 
   return (
     <div className="flex lg:flex-row flex-col justify-center rounded-3xl max-w-full body  max-h-full shadow-2xl shadow-slate-600">
-      <div className=" w-full lg:w-1/6 md:rounded-l-3xl bg-main-left">
+      <div
+        className={`w-full lg:w-1/6 md:rounded-l-3xl ${
+          darkMode ? "dark-light-info shadow-xl shadow-black" : "bg-main-left"
+        }`}
+      >
         {weather && (
           <Left
             setQuery={setQuery}

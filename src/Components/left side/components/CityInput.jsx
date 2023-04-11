@@ -7,7 +7,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { faCloud } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CityInput = ({ setQuery }) => {
+const CityInput = ({ setQuery, darkMode }) => {
   //UseState for the input
   const [city, setCity] = useState("");
 
@@ -31,7 +31,11 @@ const CityInput = ({ setQuery }) => {
   return (
     <div className="h-full max-w-full sm:mt-14 mt-2 flex justify-center items-center">
       <div className="h-full max-w-full flex flex-col items-center justify-center">
-        <h1 className="my-4 font-bold bg-gray-500 w-full text-white rounded-xl text-center text-base xl:text-lg 2xl:text-xl">
+        <h1
+          className={`my-4 font-bold ${
+            darkMode ? "" : "bg-gray-500 text-white"
+          }  w-full  rounded-xl text-center text-base xl:text-lg 2xl:text-xl`}
+        >
           <FontAwesomeIcon icon={faCloud} className="mr-1" />
           Weather App
           <FontAwesomeIcon icon={faCloud} className="ml-1" />
