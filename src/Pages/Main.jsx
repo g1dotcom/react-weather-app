@@ -35,6 +35,7 @@ const Main = () => {
             units={units}
             setUnits={setUnits}
             weather={weather}
+            darkMode={darkMode}
           />
         )}
       </div>

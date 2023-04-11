@@ -10,11 +10,16 @@ import { formatToLocalTime } from "../../../services/weatherService";
 
 const infoWeather = ({
   weather: { sunrise, sunset, temp_min, temp_max, timezone },
+  darkMode,
 }) => {
   return (
     <div
-      className="bg-main-left  flex sm:flex-row justify-center  md:justify-between  py-2 mx-16 sm:px-10 shadow-lg shadow-gray-500
-     hover:bg-gray-200  transition-all duration-500 flex-wrap w-full 2xl:text-xl text-sm mt-4 rounded-xl"
+      className={` ${
+        darkMode
+          ? "dark-right-button shadow-xl shadow-gray-900 text-white hover:bg-gray-600"
+          : "bg-main-left hover:bg-gray-200"
+      }  flex sm:flex-row justify-center  md:justify-between  py-2 mx-16 sm:px-10 shadow-lg shadow-gray-500
+       transition-all duration-500 flex-wrap w-full 2xl:text-xl text-sm mt-4 rounded-xl`}
     >
       <div className="flex justify-center items-center md:mx-2 ">
         <WiSunrise size={25} className="mx-2" />

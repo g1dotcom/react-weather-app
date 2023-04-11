@@ -48,8 +48,8 @@ const Right = ({
           className={` cursor-pointer hover:opacity-50 ${
             selected
               ? "text-gray-500 underline underline-offset-8 shadow-xl  font-main shadow-slate-300  2xl:text-xl text-sm font-bold "
-              : "text-gray-400 font-main  2xl:text-xl text-md 2xl:text-xl text-sm font-bold "
-          }`}
+              : "text-gray-500 font-main  text-md 2xl:text-xl text-sm font-bold "
+          } ${darkMode ? "text-white" : "text-black"} `}
           onClick={handleclick}
         >
           DAILY FORECAST
@@ -60,7 +60,7 @@ const Right = ({
             selected
               ? "text-gray-500 font-main 2xl:text-xl text-sm font-bold  "
               : "text-gray-500 underline underline-offset-8 shadow-xl font-bold font-main shadow-slate-300 2xl:text-xl text-sm  "
-          }`}
+          } ${darkMode ? "text-white" : "text-black"}`}
           onClick={handleclick}
         >
           HOURLY FORECAST{" "}
@@ -86,10 +86,15 @@ const Right = ({
       </div>
 
       <div className="flex items-center justify-center">
-        <InfoWeather weather={weather} />
+        <InfoWeather weather={weather} darkMode={darkMode} />
       </div>
       <div className="mt-10 w-full h-full ">
-        <CityBox weather={weather} units={units} setUnits={setUnits} />
+        <CityBox
+          weather={weather}
+          units={units}
+          setUnits={setUnits}
+          darkMode={darkMode}
+        />
       </div>
     </div>
   );
